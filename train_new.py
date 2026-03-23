@@ -61,11 +61,11 @@ zero1 = ZeroPadding2D(padding=(1, 1))(bat1)
 
 conv3 = Conv2D(32, kernel_size=(3,3), activation='relu', padding='valid', kernel_regularizer=regularizers.l2(0.05))(zero1)
 conv4 = Conv2D(32, kernel_size=(3,3), activation='relu', padding='valid', kernel_regularizer=regularizers.l2(0.05))(conv3)
-bat2 = BatchNormalization()(conv4)
+bat2 = BatchNormalization()(conv4
 
 conv5 = Conv2D(64, kernel_size=(3,3), activation='relu',strides=(1, 1), padding='valid')(bat2)
 conv6 = Conv2D(64, kernel_size=(3,3), activation='relu',strides=(1, 1), padding='valid')(conv5)
-bat3 = BatchNormalization()(conv6)
+bat3 =  BatchNormalization()(conv6)
 pool1 = MaxPooling2D(pool_size=(2, 2))(bat3)
 zero2 = ZeroPadding2D(padding=(1, 1))(pool1)
 
@@ -209,6 +209,9 @@ def plot_history(history):
 #import above function and pass the parameter used while training    
 plot_history(m1)
 
+
+
+print("hello")
 
 
 
